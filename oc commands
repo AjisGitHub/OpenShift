@@ -1,0 +1,83 @@
+## 🚀 OpenShift CLI (`oc`) Command Reference
+
+### 📁 Project and Namespace Management
+1. `oc new-project <project-name>` – Creates a new project (namespace) with the specified name.
+2. `oc project <project-name>` – Switches the current context to the specified project.
+3. `oc project` – Lists all projects (namespaces) the user has access to.
+4. `oc delete project <project-name>` – Deletes the specified project.
+
+### ⚙️ Resource Management
+5. `oc get all` – Lists all resources in the current namespace.
+6. `oc get <resource-type> <resource-name> -o yaml` – Displays the details of a specific resource in YAML format.
+7. `oc apply -f <file.yaml>` – Creates or updates resources based on the YAML or JSON file provided.
+8. `oc delete <resource-type> <resource-name>` – Deletes a specific resource.
+9. `oc edit <resource-type> <resource-name>` – Edits a resource directly in the terminal.
+
+### 🧱 Pods
+10. `oc get pods` – Lists all pods in the current namespace.
+11. `oc describe pod <pod-name>` – Displays detailed information about a specific pod.
+12. `oc logs <pod-name>` – Shows the logs for a specific pod.
+13. `oc exec -it <pod-name> -- <command>` – Executes a command inside a running pod.
+14. `oc annotate <resource-type> <resource-name> <annotation>` – Adds an annotation to a resource.
+15. `oc label <resource-type> <resource-name> <label>` – Adds a label to a resource for easier identification and selection.
+
+### 📦 Deployments and ReplicaSets
+16. `oc create deployment <deployment-name> --image=<image>` – Creates a new deployment with the specified image.
+17. `oc get deployment <deployment-name>` – Shows details about a specific deployment.
+18. `oc scale deployment <deployment-name> --replicas=<number>` – Changes the number of replicas of a deployment.
+19. `oc rollout status deployment/<deployment-name>` – Displays the status of the latest deployment rollout.
+20. `oc rollout undo deployment/<deployment-name>` – Reverts the current deployment to the previous version.
+
+### 🌐 Services
+21. `oc create service clusterip <service-name> --tcp=8080:80` – Creates a new ClusterIP service.
+22. `oc get svc` – Lists all services in the current namespace.
+23. `oc expose deployment <deployment-name> --type=ClusterIP --port=8080` – Exposes a deployment as a service.
+
+### 🗂 ConfigMaps and Secrets
+24. `oc create configmap <configmap-name> --from-literal=<key>=<value>` – Creates a ConfigMap.
+25. `oc create secret generic <secret-name> --from-literal=<key>=<value>` – Creates a Secret.
+26. `oc set env deployment/<deployment-name> <key>=<value>` – Sets an environment variable in a deployment.
+
+### 💾 Persistent Volumes and Claims
+27. `oc get pv` – Lists all PersistentVolumes.
+28. `oc get pvc` – Lists all PersistentVolumeClaims.
+29. `oc create -f <pvc-config-file>.yaml` – Creates a PersistentVolumeClaim.
+
+### 🛣️ Networking
+30. `oc get network.config.openshift.io/cluster -o yaml` – Displays the cluster network configuration.
+31. `oc patch network.config.openshift.io/cluster -p '{"spec":{"clusterNetwork":[{"cidr":"10.128.0.0/14","hostPrefix":23}]}}' --type=merge` – Updates the network CIDR.
+
+### 🖼️ Image Management
+32. `oc image info <image-name>` – Shows image details.
+33. `oc tag <image-name> <new-image-name>` – Tags an image with a new name.
+34. `oc import-image <image-stream-name> --from=<image-name>` – Imports an image into an image stream.
+
+### 🏗️ Build and Image Streams
+35. `oc new-build --strategy=Docker --name <image-name> <source-code-location>` – Creates a Docker build config.
+36. `oc start-build <image-name>` – Starts a build from an image stream.
+37. `oc import-image <image-stream-name> --from=<image-name>` – Imports an image (repeated for emphasis).
+
+### 🔧 Builds and BuildConfigs
+38. `oc create bc <build-config-name> --binary --image-stream=python:3.6 --source-secret=mysecret` – Creates a binary build config.
+39. `oc start-build <build-config-name>` – Starts a build from the build config.
+
+### 🔁 Rolling Updates
+40. `oc rollout status deployment/<deployment-name>` – Shows deployment rollout status.
+41. `oc rollout undo deployment/<deployment-name>` – Reverts to the previous deployment.
+
+### 🧩 Troubleshooting
+42. `oc logs <pod-name>` – Shows pod logs.
+43. `oc describe pod <pod-name>` – Describes a pod in detail.
+44. `oc get events` – Lists recent events in the namespace.
+
+### 🔐 Role-Based Access Control (RBAC)
+45. `oc create rolebinding <role-binding-name> --role=admin --user=<username>` – Grants admin role to a user.
+46. `oc get clusterrolebindings` – Lists all cluster role bindings.
+
+### 🛠️ Operator Management
+47. `oc get operators.operators.coreos.com` – Lists all installed operators.
+48. `oc adm upgrade` – Initiates a cluster upgrade.
+
+### 🖥️ MachineSets and Machines
+49. `oc get machinesets` – Lists all machine sets.
+50. `oc describe machineset <machineset-name>` – Describes a machine set.
