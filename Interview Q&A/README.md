@@ -74,8 +74,6 @@ VM vs Container → Why containers are lighter, faster, and better for microserv
 
 Kubernetes vs OpenShift → Why OpenShift on top of Kubernetes.
 
-Deployment vs StatefulSet vs DaemonSet → When to use each.
-
 ReplicaSet vs ReplicationController → Differences and usage.
 
 Ingress vs OpenShift Route → Why OpenShift uses Routes instead of just Ingress.
