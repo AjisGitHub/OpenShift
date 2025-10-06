@@ -45,6 +45,27 @@ A Kubernetes namespace is like **an empty room** — you need to bring your own 
 
 An OpenShift project is like a **furnished office** — it already comes with access controls, quotas, and policies ready to use
 
+## 5. Deployment vs StatefulSet vs DaemonSet — When to Use Each
+Use Deployment for stateless apps — scale easily, no unique identity.
+
+Use StatefulSet for stateful apps — each Pod has a stable name, storage, and identity.
+
+Use DaemonSet for node-level apps — ensures one Pod per node for monitoring or system tasks.
+
+
+
+
+| **Feature**      | **Deployment**                                  | **StatefulSet**                                      | **DaemonSet**                                       |
+| ---------------- | ----------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------- |
+| **Purpose**      | Run stateless applications                      | Run stateful applications                            | Run one Pod per node                                |
+| **Pod Identity** | Pods are identical and replaceable              | Pods have stable identities (name, network, storage) | Pod identity tied to node                           |
+| **Pod Naming**   | Randomly generated names (e.g., `nginx-abc123`) | Predictable names (e.g., `db-0`, `db-1`, `db-2`)     | Pod name usually tied to node                       |
+| **Storage**      | Uses ephemeral or shared storage                | Uses PersistentVolumeClaims (PVCs)                   | Usually ephemeral or host-based                     |
+| **Scaling**      | Easy horizontal scaling                         | Ordered, controlled scaling (one at a time)          | Automatically runs on all or selected nodes         |
+| **Use Case**     | Web apps, microservices, API servers            | Databases, message queues                            | Node-level agents, log collectors, monitoring tools |
+
+
+
 ### Conceptual Comparisons
 
 Container vs Pod → Why pod abstraction is needed.
