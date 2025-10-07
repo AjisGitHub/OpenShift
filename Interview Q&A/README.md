@@ -247,3 +247,24 @@ Why is ArgoCD (GitOps) preferred over manual YAML deployments?
 Why is OpenShift considered more secure and enterprise-ready than vanilla Kubernetes?
 
 
+### Questions asked in NTT DATA
+
+From server A route should be connect if we try to access even we have server B,C,D. How to achieve this
+ 
+How to create communication between projects 
+ 
+We have 10 clusters, able to login the cluster and take node count for 9 clusters stored in DB. But one cluster where the application running doesn't able to login , getting 403 forbidden.
+ 
+Diff b/w ACM and ACS
+ 
+How do you perform application setup ? what are the things you required?
+ 
+if you are creating one deployment, everything good at YAML. the pod is showing as 0/0. what is the reason, how do you fix this 
+ 
+Crashloopbackoff, Imagepulling
+
+During Firmware upgrade if iLO console not accessible what you to do?
+
+Diff b/w openshift v4.14 and v4.18
+
+
