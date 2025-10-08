@@ -267,4 +267,6 @@ During Firmware upgrade if iLO console not accessible what you to do?
 
 Diff b/w openshift v4.14 and v4.18
 
+How do you configure grafana and prometheus 
+
 
