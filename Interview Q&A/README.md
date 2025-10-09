@@ -269,4 +269,7 @@ Diff b/w openshift v4.14 and v4.18
 
 How do you configure grafana and prometheus 
 
+Explain about Operators (Service Mesh, Tekton)
+
+
 
