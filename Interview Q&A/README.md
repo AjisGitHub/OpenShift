@@ -249,52 +249,52 @@ Why is OpenShift considered more secure and enterprise-ready than vanilla Kubern
 
 ### Questions asked in NTT DATA
 
-Can you explain the architecture of Red Hat OpenShift and its key components?
+1. Can you explain the architecture of Red Hat OpenShift and its key components?
 
 
 
-What are the differences between ACM and ACS?
+2. How would you deploy an application in OpenShift cluster. What are the resources you would require?
 
 
 
-How would you deploy an application in OpenShift cluster. What are the resources you would require?
+3. What are the key differences between OpenShift versions 4.14 and 4.18 in terms of features and enhancements?
 
 
 
-You created a Deployment and the YAML configuration appears correct, but the Pod status remains at 0/0. What could be the reasons, and how would you resolve it?
+4. What are the differences between ACM and ACS?
 
 
 
-If a Pod is stuck in a CrashLoopBackOff state, what steps would you take to troubleshoot and fix the issue?
+5. You created a Deployment and the YAML configuration appears correct, but the Pod status remains at 0/0. What could be the reasons, and how would you resolve it?
 
 
 
-If a Pod is in an ImagePullBackOff or ErrImagePull state, how would you diagnose and resolve the problem?
+6. If a Pod is stuck in a CrashLoopBackOff state, what steps would you take to troubleshoot and fix the issue?
 
 
 
-During a firmware upgrade, if the iLO console becomes inaccessible, how would you proceed with troubleshooting?
+7. If a Pod is in an ImagePullBackOff or ErrImagePull state, how would you diagnose and resolve the problem?
 
 
 
-What are the key differences between OpenShift versions 4.14 and 4.18 in terms of features and enhancements?
+8. During a firmware upgrade, if the iLO console becomes inaccessible, how would you proceed with troubleshooting?
 
 
 
-How do you set up and configure Grafana and Prometheus for monitoring in OpenShift cluster?
+9. How do you set up and configure Grafana and Prometheus for monitoring in OpenShift cluster?
 
 
 
-What are Operators in OpenShift, and why are they used? How many operators you have used in your projects?
+10. What are Operators in OpenShift, and why are they used? How many operators you have used in your projects?
 
 
 
-You have multiple pod (A, B, C, and D), and you want all external route traffic to always flow through only pod A. How would you configure OpenShift to achieve this?
+11. You have multiple pod (A, B, C, and D), and you want all external route traffic to always flow through only pod A. How would you configure OpenShift to achieve this?
 
 
 
-You have three OpenShift projects — Project X, Project Y, and Project Z. How can you enable secure communication between these projects?
+12. You have three OpenShift projects — Project X, Project Y, and Project Z. How can you enable secure communication between these projects?
 
 
 
-There is one application to log into each cluster to collect node counts and store them in a database. You have 10 OpenShift clusters. The script works for 9 clusters but fails with a 403 Forbidden error on the 10th cluster, even though manual login works. What could be the cause, and how would you resolve it?
+13. There is one application to log into each cluster to collect node counts and store them in a database. You have 10 OpenShift clusters. The script works for 9 clusters but fails with a 403 Forbidden error on the 10th cluster, even though manual login works. What could be the cause, and how would you resolve it?
