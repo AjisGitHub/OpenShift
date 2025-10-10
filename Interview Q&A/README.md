@@ -249,27 +249,52 @@ Why is OpenShift considered more secure and enterprise-ready than vanilla Kubern
 
 ### Questions asked in NTT DATA
 
-From server A route should be connect if we try to access even we have server B,C,D. How to achieve this
- 
-How to create communication between projects 
- 
-We have 10 clusters, able to login the cluster and take node count for 9 clusters stored in DB. But one cluster where the application running doesn't able to login , getting 403 forbidden.
- 
-Diff b/w ACM and ACS
- 
-How do you perform application setup ? what are the things you required?
- 
-if you are creating one deployment, everything good at YAML. the pod is showing as 0/0. what is the reason, how do you fix this 
- 
-Crashloopbackoff, Imagepulling
-
-During Firmware upgrade if iLO console not accessible what you to do?
-
-Diff b/w openshift v4.14 and v4.18
-
-How do you configure grafana and prometheus 
-
-Explain about Operators (Service Mesh, Tekton)
+Can you explain the architecture of Red Hat OpenShift and its key components?
 
 
 
+What are the differences between ACM and ACS?
+
+
+
+How would you deploy an application in OpenShift cluster. What are the resources you would require?
+
+
+
+You created a Deployment and the YAML configuration appears correct, but the Pod status remains at 0/0. What could be the reasons, and how would you resolve it?
+
+
+
+If a Pod is stuck in a CrashLoopBackOff state, what steps would you take to troubleshoot and fix the issue?
+
+
+
+If a Pod is in an ImagePullBackOff or ErrImagePull state, how would you diagnose and resolve the problem?
+
+
+
+During a firmware upgrade, if the iLO console becomes inaccessible, how would you proceed with troubleshooting?
+
+
+
+What are the key differences between OpenShift versions 4.14 and 4.18 in terms of features and enhancements?
+
+
+
+How do you set up and configure Grafana and Prometheus for monitoring in OpenShift cluster?
+
+
+
+What are Operators in OpenShift, and why are they used? How many operators you have used in your projects?
+
+
+
+You have multiple pod (A, B, C, and D), and you want all external route traffic to always flow through only pod A. How would you configure OpenShift to achieve this?
+
+
+
+You have three OpenShift projects — Project X, Project Y, and Project Z. How can you enable secure communication between these projects?
+
+
+
+There is one application to log into each cluster to collect node counts and store them in a database. You have 10 OpenShift clusters. The script works for 9 clusters but fails with a 403 Forbidden error on the 10th cluster, even though manual login works. What could be the cause, and how would you resolve it?
