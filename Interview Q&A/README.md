@@ -10,6 +10,7 @@ _In logging_: App container + Fluentd sidecar in the same pod.
 
 _In service mesh_: Envoy proxy injected as a sidecar container in the same pod.
 
+---
 
 ## 2. What is difference between VM and container and Why did we need Containers when we already had VMs?
 A VM virtualizes hardware and runs a full OS per instance, while a container virtualizes only the OS user space and shares the host kernel.
@@ -21,6 +22,7 @@ A single physical server might run 10 VMs, but it can run hundreds of containers
 
 In Kubernetes/OpenShift, containers make scaling to thousands of microservices feasible, something not practical with VMs.
 
+---
 
 ## 3. What is difference between kubernetes and openshift ? Why did we need openshift when we had already kubernetes?
 Kubernetes is the open-source container orchestration platform that provides the core building blocks like scheduling, scaling, and networking.
@@ -33,6 +35,8 @@ With Kubernetes, you’d need to set up Jenkins/ArgoCD for CI/CD, Harbor/Quay fo
 
 With OpenShift, all of this comes pre-integrated and supported by Red Hat, reducing time-to-production.
 
+---
+
 ## 4. what is the difference b/w namespaces and project? why did we need project when we had already namespaces?
 
 A Namespace in Kubernetes is a logical resource isolation boundary, whereas an OpenShift Project is a higher-level abstraction built on top of a namespace.
@@ -44,6 +48,8 @@ We need Projects because while namespaces provide isolation, they lack automatio
 A Kubernetes namespace is like **an empty room** — you need to bring your own furniture, locks, and rules.
 
 An OpenShift project is like a **furnished office** — it already comes with access controls, quotas, and policies ready to use
+
+---
 
 ## 5. Deployment vs StatefulSet vs DaemonSet — When to Use Each
 Use Deployment for stateless apps — scale easily, no unique identity.
@@ -64,7 +70,7 @@ Use DaemonSet for node-level apps — ensures one Pod per node for monitoring or
 | **Scaling**      | Easy horizontal scaling                         | Ordered, controlled scaling (one at a time)          | Automatically runs on all or selected nodes         |
 | **Use Case**     | Web apps, microservices, API servers            | Databases, message queues                            | Node-level agents, log collectors, monitoring tools |
 
-
+---
 
 ### Conceptual Comparisons
 
