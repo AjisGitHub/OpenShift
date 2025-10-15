@@ -289,4 +289,22 @@ Why is OpenShift considered more secure and enterprise-ready than vanilla Kubern
 13. You have three OpenShift projects — Project X, Project Y, and Project Z. How can you enable secure communication between these projects?
 
 14. There is one application to log into each cluster to collect node counts and store them in a database. You have 10 OpenShift clusters. The script works for 9 clusters but fails with a 403 Forbidden error on the 10th cluster, even though manual login works. What could be the cause, and how would you resolve it?
-    
+
+
+
+
+
+
+If Pod is in Container Creating state, what does mean
+ACS 
+OpenShift advantages
+ACM purpose
+OpenShift Pipeline
+We have three worker nodes. If one is not ready, how do you troubleshoot
+How to do an OpenShift Cluster Upgrade
+Egress and ingress
+Cordon and UnSchedulable 
+Which pod should be removed from the node if it is not ready(Limit and tolerances)
+SCC and RBAC
+If PVC is pending state,  how would you tshoot
+
