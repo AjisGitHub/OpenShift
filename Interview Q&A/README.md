@@ -379,4 +379,25 @@ Q. What happens when a StatefulSet pod cannot mount its volume after moving to a
 
 
 
+###  𝐊𝐮𝐛𝐞𝐫𝐧𝐞𝐭𝐞𝐬 𝐢𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐪𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬
+1. Your pod is stuck in CrashLoopBackOff. How do you debug and fix it?
+
+2. How do you perform zero-downtime deployments in Kubernetes?
+
+3. Your service is not accessible externally - where do you start troubleshooting?
+
+4. Explain how you’d handle a failed rollout during a deployment.
+
+5. How would you optimize resource requests and limits in a production cluster?
+
+6. How do you secure secrets in Kubernetes?
+
+7. A node went down suddenly - what happens to the pods running on it?
+
+8. How do you handle database credentials rotation in Kubernetes?
+
+9. What’s your strategy for backup and restore in a cluster?
+
+10. How do you implement auto-scaling when traffic fluctuates heavily?
+
 
