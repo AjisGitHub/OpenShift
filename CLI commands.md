@@ -117,3 +117,13 @@ A handy cheat sheet for OpenShift developers and administrators using the `oc` C
 - `oc describe machineset <name>` – Machine set details.
 
 ---
+
+## Check the Memory size
+- `oc get nodes -l 'node-role.kubernetes.io/worker' -o custom-columns=NAME:.metadata.name,CAPACITY:.status.capacity.memory,ALLOCATABLE:.status.allocatable.memory  --no-headers
+
+## only print the error pod
+- `oc get pod -n mdr-ccdm1 -o wide | grep -v '1/1' | grep -v '2/2' | grep -v '3/3'| grep -v '4/4'| grep -v '5/5'| grep -v '6/6' | grep -v '7/7'| grep -v '8/8' | grep -v '9/9' | grep -v '10/10' | grep -v Complete
+
+
+## Shutdown the node
+- `shutdown -h now 
