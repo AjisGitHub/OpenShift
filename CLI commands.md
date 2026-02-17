@@ -115,7 +115,7 @@ A handy cheat sheet for OpenShift developers and administrators using the `oc` C
 ## MachineSets and Machines
 - `oc get machinesets` – List machine sets.
 - `oc describe machineset <name>` – Machine set details.
-- 'oc get vmi' – List the Virtual_Machine_Instance status
+- `oc get vmi` – List the Virtual_Machine_Instance status
 
 ---
 
