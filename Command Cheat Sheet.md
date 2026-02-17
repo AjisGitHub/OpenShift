@@ -34,6 +34,8 @@ A handy cheat sheet for OpenShift developers and administrators using the `oc` C
 - `oc get pods -A -o wide` - List the pods across all namespaces with detailed.
 - `oc adm top pods -A --sort-by cpu | head -n 20` - Check the pod utilization based on CPU
 - `oc adm top pods -A --sort-by memory | head -n 20` - Check the pod utilization based on Memory
+- `oc get pods --all-namespaces --field-selector=status.phase=Running -o json | jq '.items[]|select(any( .status.containerStatuses[]; .restartCount > 3))|.metadata.name'` -Check the restarted pods 
+
 
 
 
@@ -128,12 +130,20 @@ A handy cheat sheet for OpenShift developers and administrators using the `oc` C
 - `oc get vmi` – List the Virtual_Machine_Instance status
 
 ---
+
 ## Nodes 
 - `oc get nodes -o wide` - List nodes
 - `oc get nodes -l 'node-role.kubernetes.io/worker' -o custom-columns=NAME:.metadata.name,CAPACITY:.status.capacity.memory,ALLOCATABLE:.status.allocatable.memory  --no-headers` – Check the nodes Memory size
 - `oc adm top nodes` - Summarize CPU and memory usage for each node within the cluster
 - `oc debug <node>` - Login to the node
 - `shutdown -h now` - Shutdown the BMH node after debugging
+
+---
+
+## Alerts
+- `oc exec -it alertmanager-main-0 -n openshift-monitoring -- amtool --alertmanager.url http://localhost:9093 alert query` - Check the active alerts present in cluster
+  
+
 
 
 
