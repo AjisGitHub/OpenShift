@@ -48,6 +48,8 @@ A handy cheat sheet for OpenShift developers and administrators using the `oc` C
 - `oc scale deployment <name> --replicas=<number>` – Scale replicas.
 - `oc rollout status deployment/<name>` – Rollout status.
 - `oc rollout undo deployment/<name>` – Rollback deployment.
+- `oc get deployment --all-namespaces` - To list all deployments
+- `oc get rs -o wide` - To list all ReplicaSets
 
 ---
 
@@ -133,8 +135,9 @@ A handy cheat sheet for OpenShift developers and administrators using the `oc` C
 
 ## Nodes 
 - `oc get nodes -o wide` - List nodes
+- `oc describe node/<node name>` - Describe the node in detail
 - `oc get nodes -l 'node-role.kubernetes.io/worker' -o custom-columns=NAME:.metadata.name,CAPACITY:.status.capacity.memory,ALLOCATABLE:.status.allocatable.memory  --no-headers` – Check the nodes Memory size
-- `oc adm top nodes` - Summarize CPU and memory usage for each node within the cluster
+- `oc adm top nodes` - List node memory and CPU utilisation
 - `oc debug <node>` - Login to the node
 - `shutdown -h now` - Shutdown the BMH node after debugging
 
