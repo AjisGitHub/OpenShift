@@ -10,6 +10,7 @@ A handy cheat sheet for OpenShift developers and administrators using the `oc` C
 - `oc project` – View current project and accessible ones.
 - `oc delete project <project-name>` – Delete a project.
 - `oc get project` - List the projects
+- `oc project <project name>` - Switch the project
 
 ---
 
@@ -31,6 +32,10 @@ A handy cheat sheet for OpenShift developers and administrators using the `oc` C
 - `oc label <resource-type> <resource-name> <label>` – Label resources.
 - `oc get pods --all-namespaces | grep -Ev '([0-9]+)/\1|Complete'` - List the only error pods
 - `oc get pods -A -o wide` - List the pods across all namespaces with detailed.
+- `oc adm top pods -A --sort-by cpu | head -n 20` - Check the pod utilization based on CPU
+- `oc adm top pods -A --sort-by memory | head -n 20` - Check the pod utilization based on Memory
+
+
 
 
 ---
