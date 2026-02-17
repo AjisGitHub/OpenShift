@@ -127,7 +127,7 @@ A handy cheat sheet for OpenShift developers and administrators using the `oc` C
 - `oc get nodes -o wide` - List nodes
 - `oc get nodes -l 'node-role.kubernetes.io/worker' -o custom-columns=NAME:.metadata.name,CAPACITY:.status.capacity.memory,ALLOCATABLE:.status.allocatable.memory  --no-headers` – Check the nodes Memory size
 - `oc adm top nodes` - Summarize CPU and memory usage for each node within the cluster
-- `oc debug <node> - Login to the node
+- `oc debug <node>` - Login to the node
 - `shutdown -h now` - Shutdown the BMH node after debugging
 
 
