@@ -24,14 +24,15 @@ A handy cheat sheet for OpenShift developers and administrators using the `oc` C
 ---
 
 ## 🧱 Pods
-- `oc get pods` – List pods.
+- `oc get pods -o wide` – Inspect the list of existing pods in the project
+- `oc get pods -A -o wide` - Inspect the list of existing pods in all projects(namespaces)
 - `oc describe pod <pod-name>` – Detailed pod info.
 - `oc logs <pod-name>` – View pod logs.
 - `oc exec -it <pod-name> -- <command>` – Execute commands inside a pod.
+- `oc rsh <pod name>` - Initiate a remote shell connection to a pod
 - `oc annotate <resource-type> <resource-name> <annotation>` – Annotate resources.
 - `oc label <resource-type> <resource-name> <label>` – Label resources.
 - `oc get pods --all-namespaces | grep -Ev '([0-9]+)/\1|Complete'` - List the only error pods
-- `oc get pods -A -o wide` - List the pods across all namespaces with detailed.
 - `oc adm top pods -A --sort-by cpu | head -n 20` - Check the pod utilization based on CPU
 - `oc adm top pods -A --sort-by memory | head -n 20` - Check the pod utilization based on Memory
 - `oc get pods --all-namespaces --field-selector=status.phase=Running -o json | jq '.items[]|select(any( .status.containerStatuses[]; .restartCount > 3))|.metadata.name'` -Check the restarted pods 
@@ -138,6 +139,7 @@ A handy cheat sheet for OpenShift developers and administrators using the `oc` C
 - `oc describe node/<node name>` - Describe the node in detail
 - `oc get nodes -l 'node-role.kubernetes.io/worker' -o custom-columns=NAME:.metadata.name,CAPACITY:.status.capacity.memory,ALLOCATABLE:.status.allocatable.memory  --no-headers` – Check the nodes Memory size
 - `oc adm top nodes` - List node memory and CPU utilisation
+- `watch oc adm top node` - Check node usage
 - `oc debug <node>` - Login to the node
 - `shutdown -h now` - Shutdown the BMH node after debugging
 
