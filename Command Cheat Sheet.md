@@ -142,6 +142,8 @@ A handy cheat sheet for OpenShift developers and administrators using the `oc` C
 - `watch oc adm top node` - Check node usage
 - `oc debug <node>` - Login to the node
 - `shutdown -h now` - Shutdown the BMH node after debugging
+- `for i in $(oc get no -o name | cut -d/ -f2); do uptime=$(oc debug node/$i --quiet -- chroot /host uptime | tr -d '\n'); echo "$i : $uptime"; done` - Check the uptime of the all nodes
+
 
 ---
 
